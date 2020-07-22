@@ -21,8 +21,6 @@ architectures: [s390x, ppc64el, arm64, armhf, amd64, i386]
 plugs:
   config-gradle:
     interface: personal-files
-    read:
-      - $HOME/.gradle
     write:
       - $HOME/.gradle
 
@@ -42,6 +40,7 @@ apps:
       - network
       - network-bind
       - network-observe
+      - system-observe
 
 parts:
   java:
