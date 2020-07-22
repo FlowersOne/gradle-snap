@@ -28,7 +28,7 @@ plugs:
 
 apps:
   gradle:
-    command: bin/snapcraft-preload opt/gradle/bin/gradle
+    command: opt/gradle/bin/gradle
     environment:
       LANG: C.UTF-8
       LANGUAGE: C.UTF-8
@@ -52,14 +52,6 @@ parts:
       - openjdk-8-jdk-headless
     stage-packages:
       - openjdk-8-jdk-headless
-
-  snapcraft-preload:
-    plugin: cmake
-    source: https://github.com/sergiusens/snapcraft-preload.git
-    build-packages:
-      - on amd64:
-        - gcc-multilib
-        - g++-multilib
 
   gradle:
     plugin: nil
